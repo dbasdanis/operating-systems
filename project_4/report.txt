@@ -1,0 +1,33 @@
+Theodoros Antoniou 2208 tantoniou@inf.uth.gr
+Dionisis Basdanis 2166  dbasdanis@inf.uth.gr
+
+Se auti tin ergasia ilopoiisame ton clook scheduler san scheduler tou diskou. Symfwna me ton clook exipiretountai oi aithseis mono pros mia 
+kateu8unsh , apo auth me to mikrotero sector ws autin me to megalutero sector. Otan h kefali ftasei sto megalutero sector tote epistrfei 
+sto mikrotero sector.
+
+Emeis ousiastika allaxame ton kwdika stin sunartisi clook_dispatch opou me tin global metavliti disk_head_pos kratame tin 8esi stin opoia vriskete i kefali kai ektipwnoume to katallilo minima. Episis allaxame ton kwdika stin clook_add_request opou koitame pou einai h kefali. An er8ei ena aitima pou einai megalutero apo to sector pou vrisketai h kefali tote taxinomeitai kai bainei sti swsth 8esi sti lista. An omws er8ei mia aitisi pou einai mikroteri apo to sector sto opoio vrisketai
+h kefali tou diskou tote exoume mia metavliti pou kratame to max_sector
+diladi to sector mexri to opoio 8a ftasei h kefali. To stoixeio me to mikrotero sector apo auto pou vrisketai twra h kefali topo8eteitai sthn lista meta apo to max_sector, pali stin swsth seira.
+
+Kapoia endeiktika apotelesmata apo tin ektelesi tis entolis dmesg einai:
+
+[  590.497480] [CLOOK] add W 524527
+[  590.497483] [CLOOK] dsp W 524527
+[  601.517520] [CLOOK] add W 71
+[  601.517523] [CLOOK] add W 591
+[  601.517524] [CLOOK] add W 647
+[  601.517525] [CLOOK] add W 711
+[  601.517526] [CLOOK] add W 839
+[  601.517528] [CLOOK] dsp W 71
+[  601.517648] [CLOOK] dsp W 591
+[  601.517690] [CLOOK] dsp W 647
+[  601.517726] [CLOOK] dsp W 711
+[  601.517760] [CLOOK] dsp W 839
+ 
+Paratiroume oti arxika erxetai ena aitima kai exipireteitai. Epeidh den uparxei allo megalutero h kefali phgainei sto mikrotero kai arxizei na exipuretei tis aitiseis apo to mikrotero pros to megalutero , auto akrivws pou kanei kai o clook algori8mos. 
+
+Ston eikoniko disko valame ta arxeia test1.txt kai thread.c. Epeita metaglwtisame to thread.c me tin entoli :
+ gcc -g thread.c -o thread -pthread 
+kai epeita trexame to ektelesimo arxeio thread me tin entoli :
+./pthread > results
+kai telos ektelesame tin entoli dmesg.
